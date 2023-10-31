@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0em 1em 0em 1em;
+}
+
+#menu > :nth-child(2){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 10%;
+    justify-content: space-evenly;
+}
