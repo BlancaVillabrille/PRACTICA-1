@@ -8,14 +8,23 @@
 }
 
 h1{
-    font-size: 6em;
+    font-size: 6vw;
 }
 h2{
-    font-size: 3em;
+    font-size: 3vw;
+}
+h3{
+    font-size: 10vw;
 }
 
+@font-face {
+    font-family: myFirstFont;
+    src: url(NeueMontreal-Bold.otf);
+}
 
-
+:root {
+    --color-azul: #9EC9FF;
+}
 
 
 
@@ -24,6 +33,7 @@ h2{
 #menu{
     display: flex;
     flex-direction: row;
+    position: sticky;
     justify-content: space-between;
     height: 4em;
     border: 1em;
@@ -45,6 +55,14 @@ h2{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    width: 35em;
+}
+
+#menu > :nth-child(3){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 10em;
     justify-content: space-evenly;
 }
@@ -62,21 +80,22 @@ nav{
 }
 
 
-/* TEXTO PPAL */
+/* TEXTO COLECCION */
 .texto_coleccion{
     display: flex;
     flex-direction: row;
     top: 50vh;
-    z-index: 5;
+    z-index: 2;
     position: absolute;
 
 }
 
+/* BOTON */
 .btn {
     color: #000000;
     background-color: white;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.5VW;
     /* text-transform: uppercase; */
     border: 2px solid #000000;
     border-radius: 30px;
@@ -97,58 +116,19 @@ nav{
     box-shadow: none;
 }
 
-/* #carrusel{
-    height: calc(100%-4em);
-} */
-
-/* .btns{
-    border-radius: 25px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    color: rgb(2, 2, 2);
-    border-radius: 2em;
-    padding: 0 1.3em;
-    display: block;
-    transition: .1s;
-    transition-property: all;
-    display: inline-block;
-}
-
-.btns:after, .btns:hover {
-    transform: translateY(0.15em);
-}
-
-.btns:after{
-    content: "";
-    height: 100%;
-    background: #2b3d73;
-    border-radius: 2em;
-    z-index: -1;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-} */
-/* .imagenes_carrusel{
-    max-width: 100%;
+/* MAIN */
+.col{
     display: flex;
-    justify-content: center;
-} */
-
-/* Hay que poner display en el media querys */
-/* .carrusel{
-    display: none;
-} */
-/* .carrusel{
-    width: 100%;
-    height: fit-content; 
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-azul);
+}
+.col> img{
+    max-width: 50%;
+    font-family: myFirstFont;
 }
 
-.inicio{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding-top: 6vh;
-    background-color: var(--bg-color);
-} */
+
+#deslumbra{
+    margin-top: 5em;
+}
